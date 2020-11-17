@@ -7,11 +7,10 @@ const bodyParser = require('body-parser')
 
 // parse application/x-www-form-urlencoded - middleware
 app.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json - middleware
+    // parse application/json - middleware
 app.use(bodyParser.json())
 
-app.use(require('./routes/usuario'))
+app.use(require('./routes/index'))
 
 mongoose.connect(process.env.URL_DB, {
     useNewUrlParser: true,
